@@ -1,0 +1,220 @@
+body {
+  display: flex; /* generating flex container */
+  flex-direction: column; /* specifies main direction of flex axis as column */
+  align-items: center; /* aligns items in flex container to the centre */
+  justify-content: center;
+  height: 100vh; /*set body element to 100% of viewport height */
+  margin: 0; /* removes default margin by the browser*/
+  font-family: Arial, sans-serif; /* specifies font-family of text within "body' */
+  background-color: #FFE569; /* specifies background colour of webpage */
+  position: relative; /* add relative positioning to the body */
+}
+
+h1 {
+  margin-top: 20px; /*specifies top margin used by h1 tag */
+  text-align: center;
+  color: #B70404;
+  font-size: 48px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bolder; /* makes text inside h1 tag bolder */
+}
+
+#gridSizeOptions {
+  display: flex;
+  flex-wrap: wrap; /* if child element exceeds the length of container, it will wrap into next line */
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#gridSizeOptions button {
+  margin: 5px; /* specifies margin of given for button inside the division gridSizeOptions */
+}
+
+#grid {
+  display: grid; /*specifies that the element with the id "grid" should be a grid container. This means that its child elements will be laid out using the grid layout model */
+  grid-template-columns: repeat(var(--grid-size), 1fr); /* The grid-template-columns property is used to define the number and width of columns in the grid. In this case, it uses the repeat() function with the value var(--grid-size) as the number of columns. The --grid-size is a CSS custom property that should be defined elsewhere and determines the number of columns in the grid. Each column is set to occupy an equal amount of available space using the 1fr unit. */
+  grid-gap: 2px; /* The grid-template-columns property is used to define the number and width of columns in the grid. In this case, it uses the repeat() function with the value var(--grid-size) as the number of columns. The --grid-size is a CSS custom property that should be defined elsewhere and determines the number of columns in the grid. Each column is set to occupy an equal amount of available space using the 1fr unit. */
+  margin-top: 20px; /*The margin-top property specifies the amount of space to be added above the element. In this case, a margin of 20 pixels is added above the "grid" element, creating a gap between it and the elements above it. */
+}
+
+.block {
+  /* These properties set the width and height of the .block element to 60 pixels, making it a square shape. */
+  width: 60px;
+  height: 60px;
+  /*This property sets the background color of the .block element to a specific hex color code (#E8AA42), giving it a yellowish-orange color.*/
+  background-color: #E8AA42;
+  border: 2px solid #068DA9; /*he border property sets the border style of the .block element. In this case, it creates a solid border with a width of 2 pixels and a color of #068DA9, which is a shade of blue.*/
+  border-radius: 50%; /*This property sets the border radius of the .block element to 50%, resulting in a circular shape. The value of 50% means that the border will be curved equally on all four corners, creating a circle.*/
+  display: flex;/*The display property with the value flex is used to establish a flex container. This allows the .block element to use flexbox layout properties.*/
+  /*These properties are used to align the content inside the flex container both vertically and horizontally. align-items: center; centers the items vertically, and justify-content: center; centers the items horizontally.*/
+  align-items: center;
+  justify-content: center;
+  font-size: 20px; /*This property sets the font size of the text inside the .block element to 20 pixels.*/
+  cursor: pointer; /*This property sets the mouse cursor to change to a pointer when hovering over the .block element. It indicates that the element is clickable or interactive.*/
+  transition: transform 0.5s ease; /*The transition property is used to specify the transition effect for the .block element. In this case, it applies a smooth transition to the transform property over a duration of 0.5 seconds, using an ease timing function. This allows for a smooth animation or transformation when the element changes.*/
+  box-shadow: 1.8px 1.8px 0px rgba(0, 0, 0, 0.3); /*This property adds a box shadow effect to the .block element. It creates a subtle shadow with a horizontal offset of 1.8 pixels, a vertical offset of 1.8 pixels, a blur radius of 0 pixels, and a color defined by the RGBA values (0, 0, 0, 0.3).*/
+}
+
+#score {
+  margin-top: 20px; /*This property sets the top margin of the #score element to 20 pixels. It creates a vertical space between the element and the element above it.*/
+  font-size: 24px; /*This property sets the font size of the text inside the #score element to 24 pixels. It determines the size of the displayed text.*/
+}
+
+button {
+  margin-top: 20px; /*This property sets the top margin of the button element to 20 pixels. It creates a vertical space between the button and the element above it.*/
+  padding: 10px 20px; /*This property sets the padding of the button element. It adds 10 pixels of padding on the top and bottom, and 20 pixels of padding on the left and right. Padding creates space between the content inside the button and its border.*/
+  font-size: 40px; /*This property sets the font size of the text inside the button to 40 pixels. It determines the size of the displayed text.*/
+  font-weight: bolder; /*This property sets the font weight of the text inside the button to "bolder", which makes the text appear thicker and bolder than the default font weight.*/
+  width: 400px; /*this property sets the width of the button element to 400 pixels. It determines the horizontal size of the button.*/
+  height:150px; /*This property sets the height of the button element to 150 pixels. It determines the vertical size of the button.*/
+  border-radius: 100px; /*This property sets the border radius of the button element to 100 pixels. It rounds the corners of the button, creating a circular shape due to the equal width and height values.*/
+  border-width: 5px; /*This property sets the width of the border around the button element to 5 pixels. It determines the thickness of the button's border.*/
+  background-color: #F3BCC8; /*This property sets the background color of the button to a specific color represented by the hexadecimal value #F3BCC8. It determines the color that fills the button's area.*/
+  transition: background-color 1s ease, transform 0.7s ease, box-shadow 0.85s ease; /*This property specifies the transitions that should be applied to the button when certain properties change. In this case, it defines transitions for the background color, transform, and box shadow with different durations and easing functions.*/
+}
+
+button:hover {
+  background-color: #30A2FF; /*This property changes the background color of the button when it is being hovered over by the cursor. It sets the background color to a specific color represented by the hexadecimal value #30A2FF.*/
+  color: white; /*This property changes the text color of the button when it is being hovered over by the cursor. It sets the text color to white, making the text visible against the new background color.*/
+  transform: rotateX(360deg); /*This property applies a 3D transformation to the button when it is being hovered over by the cursor. It rotates the button around the X-axis by 360 degrees, creating a spinning effect.*/
+  box-shadow: 7px 7px 3px rgba(0, 0, 0, 0.3); /*This property adds a box shadow to the button when it is being hovered over by the cursor. It creates a shadow effect with an offset of 7 pixels horizontally and vertically, a blur radius of 3 pixels, and a color defined by the rgba value (red, green, blue, alpha). In this case, the shadow has a black color with an opacity of 0.3.*/
+}
+
+#instructionsButton {
+  position: absolute; /* This property positions the button element absolutely within its containing element, allowing you to precisely control its placement. It is positioned relative to its nearest positioned ancestor or to the initial containing block if there is no positioned ancestor. */
+  top: 10px; /* This property sets the distance between the top edge of the button and the top edge of its containing element to 10 pixels. It determines the vertical positioning of the button. */
+  right: 30px; /*This property sets the distance between the right edge of the button and the right edge of its containing element to 30 pixels. It determines the horizontal positioning of the button.*/
+  font-size: 12px; /*This property sets the font size of the text inside the button to 12 pixels. It determines the size of the displayed text.*/
+  /*These properties sets the width and height of the button element to automatically adjust based on its content. The button will take up the necessary width and height to fit its content.*/
+  width: auto;
+  height: auto;
+  border-radius: 5px; /*This property sets the border radius of the button element to 5 pixels. It rounds the corners of the button, creating a slightly curved appearance.*/
+  border-width: 1px; /*This property sets the width of the border around the button element to 1 pixel. It determines the thickness of the button's border.*/
+  text-align: center; /*This property aligns the text inside the button element to the center. It horizontally centers the text within the button.*/
+  background-color: #F79327; /*This property sets the background color of the button to a specific color represented by the hexadecimal value #F79327. It determines the color that fills the button's area.*/
+}
+
+#instructionsButton:hover {
+  transform: scale(1.2); /*This property applies a scaling transformation to the #instructionsButton element when it is being hovered over. It scales the button by a factor of 1.2, making it 20% larger than its original size.*/
+  background-color: #00DFA2; /*This property changes the background color of the #instructionsButton element when it is being hovered over. It sets the background color to a specific color represented by the hexadecimal value #00DFA2.*/
+  color: white; /*This property changes the text color of the #instructionsButton element when it is being hovered over. It sets the text color to white, ensuring it is visible against the new background color.*/
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.3); /*This property adds a box shadow to the #instructionsButton element when it is being hovered over. It creates a shadow effect with an offset of 3 pixels horizontally and vertically, a blur radius of 2 pixels, and a color defined by the rgba value (red, green, blue, alpha). In this case, the shadow has a black color with an opacity of 0.3.*/
+}
+
+#instructions {
+  position: absolute; /*This property positions the #instructions element absolutely within its containing element. It allows you to specify the exact position of the element using the top and right properties.*/
+  top: 50px; /*This property sets the distance between the top edge of the #instructions element and the top edge of its containing element to 50 pixels.*/
+  right: 10px; /*This property sets the distance between the right edge of the #instructions element and the right edge of its containing element to 10 pixels.*/
+  padding: 10px; /*This property adds 10 pixels of padding to the content of the #instructions element. Padding is the space between the content and the border of the element.*/
+  background-color: #A6D0DD;
+  border: 1px solid #ccc;
+  max-width: 300px; /*This property sets the maximum width of the #instructions element to 300 pixels. If the content exceeds this width, it will be automatically resized to fit within this limit.*/
+  margin-top: 30px;
+  font-family: 'Times New Roman', Times, serif; /*This property sets the font family of the text inside the #instructions element to a series of font options. If 'Times New Roman' is not available, it will fall back to the 'Times' font, and if that is also not available, it will fall back to the generic serif font.*/
+  font-size: 15px;
+  color: #0A4D68;
+  text-align: center;
+  transition: transform 0.7s ease; /*This property specifies the transition effect that will be applied when there is a change in the transform property of the #instructions element. In this case, the transition effect lasts for 0.7 seconds and has an easing function that determines the speed of the transition.*/
+}
+
+#instructions:hover {
+  transform: scale(1.1); /*This property applies a scale transformation to the #instructions element when it is being hovered over. The scale(1.1) value scales the element by a factor of 1.1, making it 10% larger than its original size. This creates an effect of slightly zooming in on the element.*/
+}
+
+/*Sets hover attributes for start and reset buttons*/
+#startButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #FF78C4;
+}
+
+#resetButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  background-color: red;
+  font-size: 20px;
+  height: auto;
+  width: auto;
+  border-width: 3.5px;
+}
+
+#startButton:hover {
+  transform: scale(1.2);
+  background-color: #30A2FF;
+}
+
+#resetButton:hover {
+  transform: scale(1.2);
+  background-color: #00C4FF;
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.3);
+}
+/*The @keyframes blink defines a blinking animation that toggles the opacity of an element between fully opaque and transparent at regular intervals.*/
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*Sets hover attributes and blinking attributes to reveal button.*/
+#revealButton {
+  position: fixed;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 25px;
+  width: auto;
+  height: auto;
+  animation: blink 1s infinite;
+}
+
+#revealButton:hover {
+  background-color: #19A7CE;
+  animation-play-state: paused;
+}
+
+/*Sets hover attributes for leaderboard.*/
+#leaderboard {
+  position: fixed;
+  top: 15%;
+  left: 20px;
+  font-size: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #ECF8F9;
+  background-color: #B31312;
+  padding: 10px;
+  transition: transform 0.7s ease, box-shadow 0.85s ease;
+
+}
+
+#leaderboard:hover {
+  transform: scale(1.1);
+  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);;
+}
+
+/*Sets marquee feature for tag having id=float.*/
+#float {
+  animation: float 15s linear infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateX(300%);
+  }
+  100% {
+    transform: translateX(-275%);
+  }
+}
+
+#float:hover {
+  animation-play-state: paused;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Minesweeper Cricket</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <!-- a division which will link game with cricbuzz website and wikipedia of minesweeper. -->
+    <div id="float">
+        <a href="https://www.cricbuzz.com/">Live Cricket Feeds</a>
+        <a href="https://en.wikipedia.org/wiki/Minesweeper_(video_game)">Official Minesweeper Info</a>
+    </div>
+    <h1>Minesweeper Cricket</h1>
+    <div id="gridSizeOptions">
+        <!-- buttons for selecting grid size. -->
+        <button onclick="setGridSize(5)">5x5</button>
+        <button onclick="setGridSize(6)">6x6</button>
+        <button onclick="setGridSize(7)">7x7</button>
+        <button onclick="setGridSize(8)">8x8</button>
+        <button onclick="setGridSize(9)">9x9</button>
+    </div>
+    <div id="grid" style="display: none;"></div>
+    <!-- this will show score of the player. -->
+    <div id="score" style="display: none;">Score: <span id="scoreValue">0/0</span></div>
+    <!-- start and Reset buttons. -->
+    <button id="startButton" onclick="startGame()" style="display: none;">Are You Ready!</button>
+    <button id="resetButton" onclick="resetGame()" style="display: none;">Reset</button>
+    <!-- instruction button. -->
+    <button id="instructionsButton" onclick="toggleInstructions()">Instructions</button>
+    <div id="instructions" style="display: none;">
+        <!-- set of Instructions. -->
+        <h2 id="instructionTitle">Instructions</h2>
+        <p>1.  Welcome! to this remix of minesweeper and cricket.<br>
+        2.  Basic Rules are same as that of classic minesweeper.<br>
+        3.  But, as cricket is mixed, runs are distrubuted randomly on board.<br>
+        4.  User can score 1,2,3,4 or 6 runs in each turn.<br>
+        5.  Beware! of fielders, they have occupied their places blindy on the field.<br>
+        6.  Numbers of fielders on the board depends on the size of grid-board, so are the number of wickets.<br>
+        7.  Score as many runs as you can before you run out of wickets and indulge yourself in happiness when you see your name on the leaderboard.<br>
+        8.  Enjoy! the Game.</p>
+    </div>
+    <!-- reveal Button. -->
+    <button id="revealButton" onclick="revealFielder()" style="display: none;">Reveal Fielder</button>
+    <!-- this will generate leaderboard. -->
+    <div>
+      <ul class="leaderboard" id="leaderboard"></ul>
+    </div>
+    <!-- java script file "script.js" is linked. -->
+    <script src="script.js"></script>
+</body>
+</html>
